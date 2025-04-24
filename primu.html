@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Info</title>
+    <!-- Vincula el archivo CSS -->
+    <link rel="stylesheet" href="css/tit.css">
+   <script>
+      let cart = [];
+        let total = 0;
+
+        function toggleCart() {
+            const cartElement = document.getElementById('cart');
+            cartElement.style.display = cartElement.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+            });
+
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('El carrito está vacío.');
+                return;
+            }
+
+            alert(`Gracias por tu compra. Total a pagar: $${total.toFixed(2)}`);
+            cart = [];
+            total = 0;
+            updateCart();
+        }
+
+
+
+
+
+   </script>
+</head>
+<body>
+    
+    <div class="h">
+
+        <div class="botones"> <a href="l.html">
+          <button class="btn">Home</button>
+        </a></div><br>
+    <!-- Botón del carrito -->
+    <button class="cart-button" onclick="toggleCart()">Carrito</button>
+
+    <!-- Contenedor del carrito -->
+    <div class="cart" id="cart">
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items"></ul>
+        <div class="total" id="total">Total: $0.00</div>
+        <button onclick="checkout()">Comprar Todo</button>
+    </div>
+
+    <!-- Contenedor de las dos Cards principales -->
+    <div class="container">
+        <div class="card">
+            <h1>Empleadores premium</h1>
+            <p>
+                Publica ofertas de empleo con un solo clic y alcanza a miles de candidatos calificados. Herramientas que ordenan y clasifican automáticamente a los candidatos según su perfil y habilidades, ahorrándote tiempo.
+            </p>
+            <p>
+                Recibe alertas inmediatas cuando alguien aplica a tus vacantes y obtén sugerencias automáticas de perfiles ideales, ahorrando tiempo y mejorando tu selección.
+            </p>
+        </div>
+
+        <div class="card">
+            <h1>Empleados premium</h1>
+            <p>
+                Haz que tu currículum sea visible para múltiples empresas y disfruta de publicaciones ilimitadas si eres un usuario premium. Tus ofertas de trabajo aparecerán en los primeros resultados de búsqueda.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contenedor de los precios -->
+    <div class="container">
+        <div class="card">
+            <h1>Premium por 4 días</h1>
+            <p>Precio: $5.99</p>
+            <button onclick="addToCart('Premium por 4 días', 5.99)">Añadir al carrito</button>
+        </div>
+        <div class="card">
+            <h1>Premium por 8 días</h1>
+            <p>Precio: $9.99</p>
+            <button onclick="addToCart('Premium por 8 días', 9.99)">Añadir al carrito</button>
+        </div>
+        <div class="card">
+            <h1>Premium por 13 días</h1>
+            <p>Precio: $15.99</p>
+            <button onclick="addToCart('Premium por 13 días', 15.99)">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h1>Premium por 17 días</h1>
+            <p>Precio: $18.99</p>
+            <button onclick="addToCart('Premium por 17 días', 18.99)">Añadir al carrito</button>
+        </div>
+        <div class="card">
+            <h1>Premium por 22 días</h1>
+            <p>Precio: $20.99</p>
+            <button onclick="addToCart('Premium por 22 días', 20.99)">Añadir al carrito</button>
+        </div>
+        <div class="card">
+            <h1>Premium por 1 mes</h1>
+            <p>Precio: $30.99</p>
+            <button onclick="addToCart('Premium por 1 mes', 30.99)">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <!-- Última tarjeta centrada -->
+    <div class="last-card card">
+        <h1>Esclavo</h1>
+        <p>Precio: $5000.99</p>
+        <button onclick="addToCart('Esclavo', 5000.99)">Añadir al carrito</button>
+    </div>
+</body>
+</html>
+<div class="container">
+    <img alt="foto de empleados" src="img/l.jpg" width="500">   
+<div class="text">
+    <h1>Como funciona la pagina</h1>
+    <p> Aquí podrás postularte para que otras personas puedan contratarte. Para hacerlo, 
+        debes proporcionar parte de tu información básica. Una vez que completes tu registro, 
+        tendrás la opción de publicar una vacante o postularte. Si eres un usuario gratuito, 
+        podrás realizar solo una publicación cada dos días, mientras que los usuarios premium 
+        disfrutarán de publicaciones ilimitadas y ventajas adicionales. </p><br>
+
+<h4>Una de las informaciones que te pedimos es una foto en la que se vea tu rostro completo. </h4> <br>
+  <p>Esto ayuda a garantizar que cumplas con los requisitos solicitados por las empresas en 
+     nuestra plataforma.</p> 
+</div>
+</div>

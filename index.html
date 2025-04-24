@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación Sofisticada</title>
+  <link rel="stylesheet" href="css/u.css">
+</head>
+<body>
+  <div id="animacion">
+    <img src="img/PEPE.png" alt="Imagen Circular">
+  </div>
+  <script >
+
+const animacionDiv = document.getElementById('animacion');
+
+    animacionDiv.addEventListener('animationend', () => {
+  setTimeout(() => {
+    window.location.href = "l.html";
+ // Cambia "ag.html" por tu enlace deseado.
+  }, 3000); // Espera de 3 segundos
+});
+
+  </script>
+</body>
+</html>
+
+
