@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #e8e8e8, #f5f5dc);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  #animacion {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #ffffff, #d3d3d3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: explosion 5s ease-in-out forwards;
+    overflow: hidden; /* Asegura que la imagen quede dentro del círculo */
+  }
+  
+  #animacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+  }
+  
+  @keyframes explosion {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.5) rotate(180deg);
+      opacity: 1;
+      background: radial-gradient(circle, #fafafa, #cccccc);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      background: radial-gradient(circle, #f5f5f5, #e0e0e0);
+      opacity: 1;
+    }
+  }
+

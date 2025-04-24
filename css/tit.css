@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0e0e0; /* Fondo gris claro */
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten y centren en varias filas */
+    gap: 20px; /* Espaciado entre filas y tarjetas */
+    justify-content: center; /* Asegura que todo esté centrado horizontalmente */
+    margin-bottom: 50px; 
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ancho fijo de las tarjetas */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro de las tarjetas */
+    text-align: center;
+  }
+  
+  .card h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .last-card {
+    margin: 50px auto 0;
+    max-width: 300px; /* Centra la tarjeta exclusiva */
+    justify-content: center;
+  }
+
+
+.cart-button {
+    position: fixed;
+    top: 20px; /* Ajusta la posición superior */
+    right: 20px; /* Ajusta la posición derecha */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.cart-button:hover {
+    background-color: #0056b3;
+}
+.cart {
+    position: fixed;
+    top: 90px; /* Ajusta para que el carrito quede debajo del botón */
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.cart h2 {
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+.cart ul li {
+    padding: 5px 0;
+}
+.cart .total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+.cart button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.cart button:hover {
+    background-color: #218838;
+}
+
+
+.botones { 
+
+    display: flex;     
+  justify-content: center;      
+  background-color: rgb(218, 218, 196);
+  padding: 10px;
+  border:10px solid ;
+  margin-right: 10px;
+  text-emphasis: sone;
+ border: 0px solid black;
+text-decoration: none;
+    }
+
+.button {
+
+  margin: 0;
+  padding: 0;
+  background-color: rgb(1s, 1s, 1s);
+    }
+
+
+button {
+
+  height: 5vh;
+  margin: 10px;
+  background-color: white;
+  
+}
+
+
+button {
+
+  position: relative;
+  border: none;
+  height: 50px;
+  width: 200px;
+  font-size: 22px;
+  transition: .3s linear;
+  cursor: pointer;
+
+}
+
+.btn:hover {
+
+    background-color: #ff6666;
+    box-shadow: 0 0 5px #ff6666, 0 0 25px #ff6666, 0 0
+    50px #ff6666, 0 0 100px #ff6666, 0 0 300px #ff6666;
+
+}
+
+  
+  

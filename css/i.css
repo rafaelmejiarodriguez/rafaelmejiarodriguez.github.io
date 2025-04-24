@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(to right, #d6dce1, #8ec1e3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #bfc6cd;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #d9e0e8;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #cdd3da;
+    color: white;
+}
+
+.content {       
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #4CAF50;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+ 
+  font-weight: bold;
+}
+.value {
+    background: linear-gradient(135deg, #48d1cc, #ffa500);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+     /* Botón redondo fijo */
+     .fixed-button {
+        position: fixed; /* Permanece en la esquina inferior derecha */
+        bottom: 20px; /* Distancia desde la parte inferior */
+        right: 20px; /* Distancia desde el lado derecho */
+        background-color: #afb3b8; /* Color del fondo */
+        color: white; /* Color del texto */
+        text-decoration: none; /* Quita subrayado */
+        text-align: center;
+        font-size: 16px; /* Tamaño del texto */
+        font-weight: bold; /* Hace el texto más destacado */
+        width: 100px; /* Ajusta el ancho para que el texto quepa bien */
+        height: 40px; /* Ajusta la altura */
+        border-radius: 20px; /* Hace el botón redondeado */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+        cursor: pointer; /* Cambia el cursor a puntero al pasar */
+        line-height: 40px; /* Centra el texto verticalmente */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+    .fixed-button:hover {
+        background-color: red; /* Cambia de color al pasar el cursor */
+    }
